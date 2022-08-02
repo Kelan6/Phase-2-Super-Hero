@@ -5,15 +5,16 @@ import Home from "./components/Home";
 import MakeYourOwn from "./components/MakeYourOwn";
 import Favorites from "./components/Favorites";
 import NavBar from "./components/NavBar";
-import Categories from "./components/Categories";
+import SortBy from "./components/SortBy.js";
 
 function App() {
   const [heroes, setHeroes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [favClicked, setFavClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/superheroes")
+    fetch("http://localhost:3000/superheroes/")
       .then((res) => res.json())
       .then((heroData) => {
         setHeroes(heroData.reverse());
@@ -31,16 +32,16 @@ function App() {
         "Content-type": "application/json",
       },
       body: JSON.stringify({ ...clickedHero, favorite: favClicked }),
-    })
+    });
     const updatedHeroes = heroes.map((hero) => {
       if (hero.id === clickedHero.id) return { ...hero, favorite: favClicked };
       return hero;
     });
-    setHeroes(updatedHeroes)
+    setHeroes(updatedHeroes);
   }
 
   function handleAddHero(newHero) {
-    setHeroes([newHero, ...heroes,])
+    setHeroes([newHero, ...heroes]);
   }
 
   return (
@@ -51,7 +52,7 @@ function App() {
           <Route exact path="/">
             <Home heroes={displayedHeroes} />
           </Route>
-          <Route exact path="/MYO" >
+          <Route exact path="/MYO">
             <MakeYourOwn onAddHero={handleAddHero} />
           </Route>
           <Route exact path="/favorites">
@@ -62,8 +63,12 @@ function App() {
               handleFavorites={handleFavorites}
             />
           </Route>
-          <Route exact path="/categories">
-            <Categories />
+          <Route exact path="/sortby">
+            <SortBy
+              isClicked={isClicked}
+              heroes={heroes}
+              setHeroes={setHeroes}
+            />
           </Route>
         </Switch>
       </div>
