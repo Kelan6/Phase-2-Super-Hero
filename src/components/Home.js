@@ -9,6 +9,7 @@ const Home = ({
     onHeroCardClick,
     onGoBack,
 }) => {
+<<<<<<< HEAD
     return (
         <div>
             {showHeroSpecs ? (
@@ -22,6 +23,21 @@ const Home = ({
             )}
         </div>
     );
+=======
+  return (
+    <div id="deezboiz-container">
+      {showHeroSpecs ? (
+        <HeroSpecs
+          featuredHero={featuredHero}
+          showHeroSpecs={showHeroSpecs}
+          onGoBack={onGoBack}
+        />
+      ) : (
+        <HeroContainer heroes={heroes} onHeroCardClick={onHeroCardClick} />
+      )}
+    </div>
+  );
+>>>>>>> noah
 };
 
 export default Home;
