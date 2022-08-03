@@ -40,7 +40,11 @@ function HeroCard({ hero, onHeroCardClick }) {
           <span>
             {" "}
             <img className="stats-icons" src={speedIcon} alt="speed" />{" "}
+<<<<<<< HEAD
             {hero.powerstats.speed}{" "}
+=======
+            {hero.powerstats.speed}
+>>>>>>> noah
           </span>
           <br></br>
           <span>
@@ -65,7 +69,9 @@ function HeroCard({ hero, onHeroCardClick }) {
         </div>
       </div>
       <img src={hero.images.sm} alt="" id="images" onClick={displayHero}></img>
-      <button> Add to Favorites</button>
+      <div>
+        <button id="add-to-favs">Add to Favorites</button>
+      </div>
     </div>
   );
 }
