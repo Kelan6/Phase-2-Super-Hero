@@ -57,10 +57,6 @@ function HeroSpecs({ featuredHero, onGoBack }) {
                 </ul>
             </div>
             <img src={featuredHero.images.lg} alt="" id="specs-images"></img>
-<<<<<<< HEAD
-            <button>Add to Favorites</button>
-            <button onClick={onGoBack}>Back to Collection</button>
-=======
             <div id="appearance-div">
                 <div>
                     <strong> - APPEARANCE - </strong>
@@ -151,8 +147,7 @@ function HeroSpecs({ featuredHero, onGoBack }) {
                     Back to Collection
                 </button>
             </div>
->>>>>>> noah
-        </div>
+        </div >
     );
 }
 
