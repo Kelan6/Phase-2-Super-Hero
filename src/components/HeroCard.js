@@ -40,11 +40,7 @@ function HeroCard({ hero, onHeroCardClick }) {
           <span>
             {" "}
             <img className="stats-icons" src={speedIcon} alt="speed" />{" "}
-<<<<<<< HEAD
-            {hero.powerstats.speed}{" "}
-=======
             {hero.powerstats.speed}
->>>>>>> noah
           </span>
           <br></br>
           <span>

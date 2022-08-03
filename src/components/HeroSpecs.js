@@ -8,8 +8,8 @@ import strengthIcon from "../assets/strength.png";
 
 function HeroSpecs({ featuredHero, onGoBack }) {
     return (
-        <div id="image-container">
-            <h4 id="titles">{featuredHero.name}</h4>
+        <div id="specs-image-container">
+            <h4 id="specs-titles">{featuredHero.name}</h4>
             <div id="featuredHero-powerstats">
                 <ul>
                     <li>
@@ -56,11 +56,9 @@ function HeroSpecs({ featuredHero, onGoBack }) {
                     </li>
                 </ul>
             </div>
-            <img src={featuredHero.images.lg} alt="" id="images"></img>
-            <button id="specs-favs">Add to Favorites</button>
-            <button id="specs-back" onClick={onGoBack}>
-                Back to Collection
-            </button>
+            <img src={featuredHero.images.lg} alt="" id="specs-images"></img>
+            <button>Add to Favorites</button>
+            <button onClick={onGoBack}>Back to Collection</button>
         </div>
     );
 }
