@@ -38,9 +38,11 @@ function App() {
     setShowHeroSpecs((showHeroSpecs) => !showHeroSpecs);
   }
 
+
+
   return (
     <div id="container">
-      <NavBar onSearchChange={setSearchTerm} searchTerm={searchTerm} onGoBack={handleGoBack} />
+      <NavBar onSearchChange={setSearchTerm} searchTerm={searchTerm} />
       <div id="nav">
         <Switch>
           <Route exact path="/">
