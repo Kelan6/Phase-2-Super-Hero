@@ -7,6 +7,7 @@ import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
 function HeroCard({ hero, onHeroCardClick }) {
+
   function displayHero() {
     onHeroCardClick(hero);
   }

@@ -6,7 +6,7 @@ import powerIcon from "../assets/power.png";
 import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
-function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack }) {
+function HeroSpecs({ featuredHero, onGoBack }) {
     return (
         <div id="image-container">
             <h4 id="titles">{featuredHero.name}</h4>
