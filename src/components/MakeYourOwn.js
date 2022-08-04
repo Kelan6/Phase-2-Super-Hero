@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function MakeYourOwn({ onAddHero }) {
+function MakeYourOwn({ onAddHero, heroes }) {
   const [name, setName] = useState("");
   const [sm, setSm] = useState("");
   const [intelligence, setIntelligence] = useState("");
@@ -9,6 +9,9 @@ function MakeYourOwn({ onAddHero }) {
   const [durability, setDurability] = useState("");
   const [power, setPower] = useState("");
   const [combat, setCombat] = useState("");
+  const [displayNewHero, setDisplayNewHero] = useState({ heroes })
+
+  console.log(displayNewHero)
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -99,6 +102,7 @@ function MakeYourOwn({ onAddHero }) {
         <button id="submit-button" type="submit">
           Add New Hero
         </button>
+
       </form>
     </div>
   );

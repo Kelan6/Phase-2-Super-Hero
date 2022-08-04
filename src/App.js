@@ -13,6 +13,7 @@ function App() {
   const [featuredHero, setFeaturedHero] = useState({});
   const [showHeroSpecs, setShowHeroSpecs] = useState(false);
 
+
   useEffect(() => {
     fetch("http://localhost:3000/superheroes/")
       .then((res) => res.json())
@@ -59,7 +60,8 @@ function App() {
             />
           </Route>
           <Route exact path="/MYO">
-            <MakeYourOwn onAddHero={handleAddHero} />
+            <MakeYourOwn onAddHero={handleAddHero} heroes={heroes}
+            />
           </Route>
           <Route exact path="/favorites">
             <Favorites heroes={heroes} />

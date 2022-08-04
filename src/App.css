@@ -268,3 +268,9 @@ ul {
     width: 800px;
     justify-items: center;
 }
+
+.super {
+  font-display: red;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: red;
+}

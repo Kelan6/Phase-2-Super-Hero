@@ -11,6 +11,7 @@ const Home = ({
 }) => {
   return (
     <div id="deezboiz-container">
+      <h1 id="super">TEST</h1>
       {showHeroSpecs ? (
         <HeroSpecs
           featuredHero={featuredHero}
