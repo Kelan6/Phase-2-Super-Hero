@@ -14,6 +14,9 @@ function MakeYourOwn({ onAddHero, MYOHeroes, onFavoriteHero, onMYOHeroes }) {
 
   console.log(displayNewHero)
 
+
+
+
   const filteredMYOHeroes = MYOHeroes.filter((hero) => hero.id >= 732);
   const displayMYOHeroes = filteredMYOHeroes.map((hero) => {
     return (
