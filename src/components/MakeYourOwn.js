@@ -10,9 +10,8 @@ function MakeYourOwn({ onAddHero, MYOHeroes, onFavoriteHero, onMYOHeroes }) {
   const [durability, setDurability] = useState("");
   const [power, setPower] = useState("");
   const [combat, setCombat] = useState("");
-  const [displayNewHero, setDisplayNewHero] = useState({ heroes })
 
-  console.log(displayNewHero)
+
 
 
 
